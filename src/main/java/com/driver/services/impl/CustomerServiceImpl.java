@@ -47,7 +47,6 @@ public class CustomerServiceImpl implements CustomerService {
 		//Book the driver with lowest driverId who is free (cab available variable is Boolean.TRUE).
 		// If no driver is available, throw "No cab available!" exception
 		//Avoid using SQL query
-		Driver diver;
 		List<Driver> list = driverRepository2.findAll();
 		for(Driver driver : list)
 		{
@@ -74,7 +73,7 @@ public class CustomerServiceImpl implements CustomerService {
 				return trip;
 			}
 		}
-		throw new Exception("No cab available");
+		throw new Exception("No cab available!");
 	}
 
 	@Override
