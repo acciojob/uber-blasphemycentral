@@ -18,10 +18,18 @@ public class Cab
 
     int perKmRate;
 
-    boolean getAvailable;
+    boolean Available;
 
     @OneToOne(mappedBy = "cab", cascade = CascadeType.ALL)
     Driver driver;
 
+    public boolean getAvailable()
+    {
+        return Available;
+    }
 
+    public void setAvailable(boolean available)
+    {
+        Available = available;
+    }
 }

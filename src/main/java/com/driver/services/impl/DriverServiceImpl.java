@@ -30,7 +30,7 @@ public class DriverServiceImpl implements DriverService {
 		Cab cab = new Cab();
 		cab.setPerKmRate(10);
 		cab.setDriver(driver);
-		cab.setGetAvailable(true);
+		cab.setAvailable(true);
 		driverRepository3.save(driver);
 	}
 
@@ -43,6 +43,6 @@ public class DriverServiceImpl implements DriverService {
 	@Override
 	public void updateStatus(int driverId){
 		//Set the status of respective car to unavailable
-		driverRepository3.findById(driverId).get().getCab().setGetAvailable(false);
+		driverRepository3.findById(driverId).get().getCab().setAvailable(false);
 	}
 }
